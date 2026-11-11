@@ -1,0 +1,42 @@
+{
+  "id": "common32-v1",
+  "batch": 32,
+  "sessions": 5,
+  "warmups": 2,
+  "timed_calls": 5,
+  "profiles": {
+    "private_photo_vault": {
+      "memory_cost": 65536,
+      "time_cost": 5,
+      "parallelism": 4
+    },
+    "threema": {
+      "memory_cost": 131072,
+      "time_cost": 8,
+      "parallelism": 1
+    },
+    "lunacam": {
+      "memory_cost": 65536,
+      "time_cost": 3,
+      "parallelism": 1
+    }
+  },
+  "primary_salts": [
+    "fixed16",
+    "candidate_specific16"
+  ],
+  "supplemental": "Private Photo Vault fixed 32-byte salt; separately labelled",
+  "main_rows": 150,
+  "supplemental_rows": 25,
+  "functional_rows": 35,
+  "functional_batch": 2,
+  "own_implementation_batch_policy": "explicit supported batch scope for every worker",
+  "idle_policy": {
+    "used_mib_below": 3400,
+    "utilization_percent_below": 10,
+    "consecutive_samples": 5,
+    "interval_seconds": 0.5
+  },
+  "boundary": "synchronized host KDF batch API after preparation; H2D/D2H and implementation initialization/finalization included; first context/JIT/reference-index preparation excluded",
+  "software": "Python3.14.7 NumPy2.4.4 CuPy14.2.0 runtime/NVRTC12.9; native CUDA11.8.89 dynamic cudart, MSVCv142/SDK22621; no version sweep"
+}

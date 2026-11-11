@@ -1,0 +1,4 @@
+﻿phase,profile,mode,batch,config,policy,n,median_seconds,throughput,units,cv_percent
+cpu,private_photo_vault,fixed,1,0,,7,0.0507502000000386,19.704355844888084,host_candidates/s,0.7993046381768949
+cpu,threema,fixed,1,0,,7,0.5053649999999834,1.9787678212777553,host_candidates/s,0.8752710359868375
+cpu,lunacam,fixed,1,0,,7,0.09220490000006976,10.845410601814475,host_candidates/s,1.3713751112025134
